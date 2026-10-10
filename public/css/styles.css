@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* header styles */
+.headerDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 48px;
+}
+
+.logo h1 {
+  font-size: 1.75rem;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  opacity: 0.7;
+}
+
+/* first part hero  */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding: 96px 48px;
+}
+
+.heroText,
+.heroImage {
+    flex: 1;
+}
+
+/* second part problems  */
+.problems {
+    display: flex;
+    gap: 48px;
+    padding: 96px 48px;
+}
+
+.problemsTitle,
+.problemsText {
+    flex: 1;
+}
+
+.problemsText {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 64px 48px;
+}

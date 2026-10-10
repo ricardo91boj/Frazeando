@@ -1,0 +1,20 @@
+{
+  "name": "frazeando",
+  "version": "1.0.0",
+  "description": "Landingpage for Frazeando",
+  "author": "Ricardo Bojorquez",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.20.0",
+    "body-parse": "^0.1.0",
+    "ejs": "^7.0.1",
+    "express": "^5.3.0",
+    "node": "^26.11.1",
+    "nodemon": "^1.14.10",
+    "vite": "^8.3.4"
+  }
+}
