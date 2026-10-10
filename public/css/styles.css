@@ -82,3 +82,28 @@ img {
     gap: 24px;
     padding: 64px 48px;
 }
+
+/* third part Why learn with me?  */
+.infoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 96px 48px;
+}
+
+.infoIntro,
+.infoDetail {
+    flex: 1;
+}
+
+.infoDetail {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.infoDetailText {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
