@@ -1,83 +1,134 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Landing</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Frazeado</title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
-    <%- include('partials/header.ejs') %>
 
-        <!-- first part hero  -->
-        <section class="hero">
-            <div class="heroText">
-                <h1>Speak real Spanish and
-                    feel at home in Latin
-                    America</h1>
-                <p>Dynamic, natural conversation
-                    classes for professionals and retirees
-                    ready for true local integration.</p>
-                <button><a href="#programs" class="btn">Book your Diagnostic Session</a></button>
+    <!-- Navbar -->
+    <header class="header">
+        <nav class="navbar">
+
+            <!-- Logo -->
+            <a href="#">
+                <img src="images/logo-frazeando.png" alt="Frazeando - Aprende español">
+            </a>
+
+            <!-- Nav Menu -->
+            <ul>
+                <li><a href="#about" class="navbar__link">About</a></li>
+                <li><a href="#programs" class="navbar__link">Programs</a></li>
+                <li><a href="#contact" class="navbar__link">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- ABOUT  -->
+    <!-- First section  -->
+    <section class="first-sec">
+        <div class="hero-ctn">
+
+            <!-- Hero Card -->
+            <div class="hero-card">
+                <h1>Learn Spanish, one phrase at a time</h1>
+                <p>
+                    Real conversations, practical phrases and classes designed
+                    to get you speaking Spanish from day one.
+                </p>
+                <button>Start learning</button>
             </div>
 
-            <div class="heroImage">
-                <img src="/images/hero.jpg" alt="Video">
+            <!-- Hero image -->
+            <div class="hero-image">
+                <img src="/images/hero.jpg" alt="Student learning Spanish online">
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- second part problems -->
-        <section id="problems" class="problems">
-            <div class="problesTitle">
-                <h2>Does this sound like
-                    you?</h2>
+    <!-- Second section  -->
+    <section class="second-sec">
+        <div class="second-ctn">
+
+            <!-- Left Card -->
+            <div class="left-card">
+                <h2>Why Frazeando?</h2>
             </div>
 
-            <div class="problemsText">
-                <p>Know some words, but fear is holding you
-                    back from speaking?</p>
-                <p>Stuck in a "tourist bubble" and struggling
-                    to build a local network?</p>
-                <p>Tired of dry grammar drills that don't
-                    help in real life?</p>
+            <!-- Right Card -->
+            <div class="right-card">
+                <p>
+                    At Frazeando we believe a language is learned through phrases,
+                    not lists of isolated words.
+                </p>
+                <p>
+                    Our classes focus on real situations: ordering food, making
+                    friends, travelling and working in Spanish.
+                </p>
+                <p>
+                    Small groups and personal attention help you gain confidence
+                    and start speaking from your very first lesson.
+                </p>
             </div>
-        </section>
 
-        <div class="cta">
-            <p>You don't need perfect grammar to speak with
-                confidence. With the Frazeando method, you'll
-                turn isolated words into fluent conversations
-                through structured practice and ultra-small groups
-                —starting your very first week.</p>
-            <button>Book your Diagnostic Session</button>
+        </div>
+    </section>
+
+    <!-- Third Section  -->
+    <section class="third-sec">
+        <div class="third-ctn">
+
+            <!-- Image -->
+            <img src="/images/cta.jpg" alt="Spanish class in progress">
+
+            <!-- Text -->
+            <p>
+                From your first words to fluent conversations: discover our
+                group and private courses for every level.
+            </p>
+
+            <!-- Call to action button -->
+            <button>Get started</button>
+
+        </div>
+    </section>
+
+    <!-- Forth section  -->
+    <section class="forth-sec">
+        <div class="forth-ctn">
+
+            <!-- First Card  -->
+            <div class="features__card first-card">
+                <div>
+                    <h2>Learn by speaking</h2>
+                    <img src="/images/feature-1.jpg" alt="Students talking in Spanish">
+                </div>
+                <p>
+                    Every lesson is built around real conversations, so you practise
+                    speaking from the very first day.
+                </p>
+            </div>
+
+            <!-- Second Card -->
+            <div class="features__card second-card">
+                <h2>Learn at your pace</h2>
+                <p>
+                    Online classes that fit your schedule, with materials you can
+                    review anytime.
+                </p>
+                <img src="/images/feature-2.jpg" alt="Online Spanish lesson">
+            </div>
         </div>
 
-        <!-- third part Why learn with me?  -->
-        <section class="infoSection">
-            <div class="cta">
-                <h2>Why Learn With Me:</h2>
-                <p>Language isn't meant to be locked in a textbook. While
-                    grammar has its place, real-life Spanish is dynamic and
-                    fluid. I teach you the language people actually speak on the
-                    streets of Latin America—in a supportive, judgment-free
-                    space where making mistakes is just part of the learning
-                    process. Connect, don't just conjugate.</p>
-            </div>
-
-            <div class="cta">
-                <h2>The Story Behind Frazeando:</h2>
-                <div class="infoDetail">
-                    <p>First paragraph.</p>
-                    <p>Second paragraph.</p>
-                </div>
-                <button>Button text</button>
-            </div>
-        </section>
-
-
-        <script type="module" src="/js/script.js"></script>
+        <!-- Button below both cards -->
+        <butto>Join a class
+        </butto>
+    </section>
 </body>
 
 </html>
