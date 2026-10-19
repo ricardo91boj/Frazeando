@@ -430,7 +430,7 @@
 }
 
 /* Eight Section Contact Me  */
-.contact-ctn {
+.eight-ctn {
     max-width: 900px;
     margin: 0 auto;
     padding: 4rem 2rem;
@@ -500,4 +500,77 @@
             opacity: 0.7;
         }
     }
+}
+
+/* nineth Section  */
+.diagnostic-sec {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    /* space between the two divs */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .diagnostic-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* keeps the button from stretching */
+        gap: 1rem;
+
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        button {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid;
+            /* temporary border until the palette is ready */
+            border-radius: 6px;
+        }
+    }
+
+    /* Div 2: elements in a column */
+    .diagnostic-expect {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .diagnostic-item {
+            display: flex;
+            align-items: center;
+            /* aligns icon and text vertically */
+            gap: 1rem;
+
+            img {
+                width: 40px;
+                height: 40px;
+                flex-shrink: 0;
+                /* prevents the icon from shrinking */
+            }
+
+            p {
+                font-size: 1.05rem;
+                line-height: 1.5;
+            }
+        }
+    }
+
+
 }
