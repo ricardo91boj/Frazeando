@@ -574,3 +574,29 @@
 
 
 }
+
+/* ===== FOOTER ===== */
+.footer {
+    padding: 2rem;
+    border-top: 1px solid;
+    /* temporary line to separate it from the content */
+}
+
+/* Container: text on the left, logo on the right */
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* aligns text and logo vertically */
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .footer__text {
+            font-size: 0.9rem;
+        }
+    
+        .footer__logo img {
+            height: 40px;
+            display: block;
+        }
+}
