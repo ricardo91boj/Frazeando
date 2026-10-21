@@ -1,0 +1,182 @@
+:root {
+
+    /* ---------- COLORS ---------- */
+
+    /* Teal */
+    --color-teal-dark: #0e6973;
+    --color-teal: #20b2aa;
+    --color-teal-light: #4ed0c6;
+
+    /* Orange */
+    --color-orange: #c24b20;
+    --color-orange-dark: #ad3509;
+    --color-salmon: #f18a7a;
+
+    /* Neutrals */
+    --color-cream: #fdfbf7;
+    --color-slate: #2f3e46;
+
+    /* ---------- BACKGROUNDS ---------- */
+    --bg-page: var(--color-cream);
+    /* main page background */
+    --bg-dark: var(--color-slate);
+    /* dark sections, e.g. footer */
+    --bg-brand: var(--color-teal-dark);
+    /* colored sections with light text */
+    --bg-accent: var(--color-orange);
+    /* buttons, highlighted blocks */
+    --bg-soft: color-mix(in srgb, var(--color-teal-light) 15%, var(--color-cream));
+    /* subtle alternate sections */
+
+    /* ---------- BORDERS (colors) ---------- */
+    --border-subtle: color-mix(in srgb, var(--color-slate) 15%, var(--color-cream));
+    /* dividers, card outlines */
+    --border-strong: var(--color-slate);
+    /* outlined buttons, inputs */
+    --border-brand: var(--color-teal-dark);
+    /* highlighted elements */
+    --border-focus: var(--color-teal);
+    /* keyboard focus outline */
+
+    /* ---------- STATES ---------- */
+    --state-success: var(--color-teal-dark);
+    /* message sent, saved */
+    --state-error: var(--color-orange-dark);
+    /* invalid email, required field */
+    --state-warning: var(--color-orange);
+    /* attention, check this */
+    --state-info: var(--color-teal);
+    /* neutral notices, tips */
+
+    /* Soft backgrounds for message boxes */
+    --state-success-bg: color-mix(in srgb, var(--state-success) 12%, var(--color-cream));
+    --state-error-bg: color-mix(in srgb, var(--state-error) 12%, var(--color-cream));
+    --state-warning-bg: color-mix(in srgb, var(--state-warning) 12%, var(--color-cream));
+    --state-info-bg: color-mix(in srgb, var(--state-info) 12%, var(--color-cream));
+
+    /* ---------- TYPOGRAPHY ---------- */
+
+    /* Font families */
+    --font-heading: "Poppins", system-ui, sans-serif;
+    --font-body: "Poppins", system-ui, sans-serif;
+
+    /* Font sizes */
+    --text-sm: 0.6rem;
+    /* footer, captions */
+    --text-base: 1rem;
+    /* 16px - body text */
+    --text-md: 1.4rem;
+    /* lead paragraphs */
+    --text-lg: 1.8rem;
+    /* h3, subtitles */
+    --text-xl: 2.2rem;
+    /* small h2 */
+    --text-2xl: 2.6rem;
+    /* h1 */
+
+
+    /* Font weights */
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    /* Line heights */
+    --leading-tight: 1.0;
+    /* headings */
+    --leading-normal: 1.4;
+    /* short text, buttons */
+    --leading-relaxed: 1.8;
+    /* long paragraphs */
+
+    /* ---------- LETTER SPACING ---------- */
+    --tracking-tight: -0.04em;
+    /* large headings (h1, h2) */
+    --tracking-normal: 0;
+    /* body text, default */
+    --tracking-wide: 0.04em;
+    /* buttons, small labels */
+    --tracking-wider: 0.08em;
+    /* uppercase text, small caps */
+
+    /* ---------- SPACING ---------- */
+    /* Scale (based on 8px) */
+    --space-3xs: 0.52rem;
+    /* tiny gaps, icon + text */
+    --space-2xs: 0.68rem;
+    /* small gaps inside elements */
+    --space-xs: 0.84rem;
+    /* button padding (vertical) */
+    --space-sm: 1rem;
+    /* 16px - base gap, small paddings */
+    --space-md: 1.4rem;
+    /* gap between stacked elements */
+    --space-lg: 1.8rem;
+    /* button padding (horizontal), side padding */
+    --space-xl: 2.2rem;
+    /* gap between columns */
+    --space-2xl: 2.6rem;
+    /* section padding (top/bottom) */
+    --space-3xl: 3rem;
+    /* large section separation */
+
+    /* Semantic (built from the scale) */
+    --section-padding-y: var(--space-2xl);
+    /* top/bottom of each section */
+    --section-padding-x: var(--space-lg);
+    /* left/right of each section */
+    --gap-columns: var(--space-xl);
+    /* side-by-side blocks (hero, features) */
+    --gap-stack: var(--space-md);
+    /* stacked elements (h1, p, button) */
+
+    /* ---------- BORDERS ---------- */
+
+    /* Radius */
+    --radius-sm: 4px;
+    /* inputs, small tags */
+    --radius-md: 8px;
+    /* buttons */
+    --radius-lg: 16px;
+    /* images, cards */
+    --radius-xl: 24px;
+    /* large panels, featured blocks */
+    --radius-full: 9999px;
+    /* pill buttons, round icons, avatars */
+
+    /* Widths */
+    --border-thin: 1px;
+    /* dividers, card outlines */
+    --border-thick: 2px;
+    /* outlined buttons, focus, highlights */
+
+    /* ---------- SHADOWS ---------- */
+    /* Tinted with slate (#2f3e46) instead of pure black for a softer look */
+    --shadow-sm: 0 1px 3px rgba(47, 62, 70, 0.08);
+    /* header, subtle lift */
+    --shadow-md: 0 4px 12px rgba(47, 62, 70, 0.10);
+    /* cards */
+    --shadow-lg: 0 10px 30px rgba(47, 62, 70, 0.14);
+    /* hover states, highlights */
+
+    /* ---------- LAYOUT ---------- */
+    --max-width: 1200px;
+    /* main content width */
+    --max-width-narrow: 800px;
+    /* text-heavy sections (about, cta) */
+    --header-height: 80px;
+    /* offset for anchor links and sticky header */
+
+
+    /* ---------- LAYERS (z-index) ---------- */
+    --z-base: 1;
+    /* normal content that needs stacking */
+    --z-dropdown: 100;
+    /* dropdown menus */
+    --z-header: 500;
+    /* sticky header */
+    --z-modal: 1000;
+    /* modals, overlays */
+
+
+}
