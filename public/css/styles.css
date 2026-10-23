@@ -5,23 +5,27 @@
     box-sizing: border-box;
 }
 
-
-
-
-
-
-
 /* ===== HEADER / NAVBAR ===== */
 .header {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    /* sticks to the very top of the window */
+    z-index: var(--z-header);
+    /* stays above the page content */
+    background-color: var(--bg-page);
+    /* content won't show through */
+    box-shadow: var(--shadow-sm);
+    /* separates it from the content below */
 
     .navbar {
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 1200px;
+        max-width: var(--max-width);
         margin: 0 auto;
-        padding: 1rem 2rem;
+        padding: var(--space-sm) var(--space-lg);
 
         /* Logo  */
         a>img {
@@ -29,20 +33,52 @@
             display: block;
         }
 
-        /* Menu  */
-        ul {
+        .navbar__toggle {
             display: flex;
-            gap: 2rem;
-            list-style: none;
+            flex-direction: column;
+            gap: 5px;
 
-            >li>a {
-                text-decoration: none;
-                font-weight: 500;
-                transition: color 0.3s;
+            @media (min-width: 768px) {
+                display: none;
+                /* hidden on tablet and up */
+            }
 
-                &:hover {
-                    color: var(--color-primary);
-                }
+            span {
+                width: 24px;
+                height: 2px;
+                background-color: var(--color-slate);
+            }
+        }
+
+
+        /* Menu: hidden by default on mobile */
+        .navbar__menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            /* right below the navbar */
+            left: 0;
+            right: 0;
+            flex-direction: column;
+            gap: var(--space-sm);
+            padding: var(--space-md) var(--space-lg);
+            background-color: var(--bg-page);
+            box-shadow: var(--shadow-md);
+            z-index: var(--z-dropdown);
+
+            /* Visible when JavaScript adds the class */
+            &.is-open {
+                display: flex;
+            }
+
+            @media (min-width: 768px) {
+                display: flex;
+                position: static;
+                flex-direction: row;
+                gap: var(--space-lg);
+                padding: 0;
+                background-color: transparent;
+                box-shadow: none;
             }
         }
     }
