@@ -111,15 +111,15 @@
     /* button padding (vertical) */
     --space-sm: 1rem;
     /* 16px - base gap, small paddings */
-    --space-md: 1.4rem;
+    --space-md: 2.2rem;
     /* gap between stacked elements */
-    --space-lg: 1.8rem;
+    --space-lg: 3.4rem;
     /* button padding (horizontal), side padding */
-    --space-xl: 2.2rem;
+    --space-xl: 4.6rem;
     /* gap between columns */
-    --space-2xl: 2.6rem;
+    --space-2xl: 5.8rem;
     /* section padding (top/bottom) */
-    --space-3xl: 3rem;
+    --space-3xl: 7rem;
     /* large section separation */
 
     /* Semantic (built from the scale) */
@@ -321,9 +321,31 @@ button {
     }
 
     *,
-    *::before,
-    *::after {
+    *::before *::after {
         transition: none !important;
         animation: none !important;
     }
+}
+
+/* widgets base diseigne  */
+section {
+    padding: var(--section-padding-x) var(--section-padding-y);
+}
+
+.book-btn {
+    color: var(--color-cream);
+    background-color: var(--color-teal);
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 10px / 50%;
+    transition: opacity 0.3s;
+
+    @media (hover: hover) {
+        &:hover {
+            opacity: 0.85;
+        }
+    }
+
 }
