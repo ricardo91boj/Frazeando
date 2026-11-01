@@ -63,17 +63,17 @@
     --font-body: "Poppins", system-ui, sans-serif;
 
     /* Font sizes */
-    --text-sm: 0.8rem;
-    /* footer, captions */
+    --text-sm: 0.875rem;
+    /* 14px - footer, captions (fixed) */
     --text-base: 1rem;
-    /* 16px - body text */
-    --text-md: 1.4rem;
+    /* 16px - body text (fixed) */
+    --text-md: clamp(1.15rem, 1.05rem + 0.44vw, 1.4rem);
     /* lead paragraphs */
-    --text-lg: 1.8rem;
+    --text-lg: clamp(1.35rem, 1.16rem + 0.8vw, 1.8rem);
     /* h3, subtitles */
-    --text-xl: 2.2rem;
+    --text-xl: clamp(1.6rem, 1.35rem + 1.06vw, 2.2rem);
     /* small h2 */
-    --text-2xl: 2.6rem;
+    --text-2xl: clamp(1.9rem, 1.61rem + 1.24vw, 2.6rem);
     /* h1 */
 
 
@@ -101,36 +101,35 @@
     --tracking-wider: 0.08em;
     /* uppercase text, small caps */
 
-    /* ---------- SPACING ---------- */
     /* Scale (based on 8px) */
-    --space-3xs: 0.52rem;
-    /* tiny gaps, icon + text */
-    --space-2xs: 0.68rem;
-    /* small gaps inside elements */
-    --space-xs: 0.84rem;
-    /* button padding (vertical) */
+    --space-3xs: 0.25rem;
+    /* 4px   - tiny gaps */
+    --space-2xs: 0.5rem;
+    /* 8px   - icon + text */
+    --space-xs: 0.75rem;
+    /* 12px  - button padding (vertical) */
     --space-sm: 1rem;
-    /* 16px - base gap, small paddings */
-    --space-md: 2.2rem;
-    /* gap between stacked elements */
-    --space-lg: 3.4rem;
-    /* button padding (horizontal), side padding */
-    --space-xl: 4.6rem;
-    /* gap between columns */
-    --space-2xl: 5.8rem;
-    /* section padding (top/bottom) */
+    /* 16px  - base gap */
+    --space-md: 1.5rem;
+    /* 24px  - stacked elements */
+    --space-lg: 2.5rem;
+    /* 40px  - button padding (horizontal), card padding */
+    --space-xl: 4rem;
+    /* 64px  - gap between columns */
+    --space-2xl: 5.5rem;
+    /* 88px  - section padding */
     --space-3xl: 7rem;
-    /* large section separation */
+    /* 112px - large section separation */
 
-    /* Semantic (built from the scale) */
-    --section-padding-y: var(--space-2xl);
-    /* top/bottom of each section */
-    --section-padding-x: var(--space-lg);
-    /* left/right of each section */
-    --gap-columns: var(--space-xl);
-    /* side-by-side blocks (hero, features) */
-    --gap-stack: var(--space-md);
-    /* stacked elements (h1, p, button) */
+    /* Semantic spacing (fluid, built from the scale) */
+    --section-padding-y: clamp(var(--space-xl), 1.76rem + 5.3vw, var(--space-3xl));
+    /* 48px → 96px */
+    --section-padding-x: clamp(var(--space-sm), 0.59rem + 1.77vw, var(--space-lg));
+    /* 16px → 32px */
+    --gap-columns: clamp(var(--space-lg), 1.59rem + 1.77vw, var(--space-xl));
+    /* 32px → 48px */
+    --gap-stack: clamp(var(--space-sm), 0.79rem + 0.88vw, var(--space-md));
+    /* 16px → 24px */
 
     /* ---------- BORDERS ---------- */
 
@@ -164,7 +163,7 @@
     /* ---------- LAYOUT ---------- */
     --max-width: 1200px;
     /* main content width */
-    --max-width-narrow: 800px;
+    --max-width-narrow: 500px;
     /* text-heavy sections (about, cta) */
     --header-height: 80px;
     /* offset for anchor links and sticky header */
@@ -227,6 +226,7 @@ h4 {
     font-family: var(--font-heading);
     font-weight: var(--weight-bold);
     line-height: var(--leading-tight);
+    text-wrap: balance;
 }
 
 h1 {
@@ -235,16 +235,16 @@ h1 {
 }
 
 h2 {
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
     letter-spacing: var(--tracking-tight);
 }
 
 h3 {
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
 }
 
 h4 {
-    font-size: var(--text-lg);
+    font-size: var(--text-md);
 }
 
 
@@ -253,6 +253,8 @@ p {
     line-height: var(--leading-relaxed);
     max-width: 65ch;
     /* comfortable line length */
+    text-wrap: pretty;
+    /* avoids a single word alone on the last line */
 }
 
 strong {
@@ -286,10 +288,16 @@ ol {
 /* ---------- Media ---------- */
 img,
 svg,
-video {
+video,
+iframe {
     display: block;
     max-width: 100%;
+}
+
+img,
+video {
     height: auto;
+    /* keeps proportions */
 }
 
 
@@ -306,6 +314,29 @@ button {
     cursor: pointer;
     background: none;
     border: none;
+}
+
+section {
+    padding-block: var(--section-padding-y);
+    padding-inline: var(--section-padding-x);
+}
+
+.book-btn {
+    color: var(--color-cream);
+    background-color: var(--color-teal);
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 10px / 50%;
+    transition: opacity 0.3s;
+
+    @media (hover: hover) {
+        &:hover {
+            opacity: 0.85;
+        }
+    }
+
 }
 
 
@@ -325,27 +356,4 @@ button {
         transition: none !important;
         animation: none !important;
     }
-}
-
-/* widgets base diseigne  */
-section {
-    padding: var(--section-padding-x) var(--section-padding-y);
-}
-
-.book-btn {
-    color: var(--color-cream);
-    background-color: var(--color-teal);
-    display: inline-block;
-    padding: 0.5rem 1.5rem;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 10px / 50%;
-    transition: opacity 0.3s;
-
-    @media (hover: hover) {
-        &:hover {
-            opacity: 0.85;
-        }
-    }
-
 }

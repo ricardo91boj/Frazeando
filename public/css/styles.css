@@ -77,6 +77,10 @@ body {
                 display: flex;
             }
 
+            a {
+                color: var(--color-cream);
+            }
+
             @media (min-width: 768px) {
                 display: flex;
                 position: static;
@@ -100,12 +104,14 @@ body {
         flex-direction: column;
         align-items: center;
         gap: var(--gap-columns);
-        max-width: var(--max-width);
+        max-width: var(--max-width-narrow);
         margin: 0 auto;
+        flex: 1;
 
-        /* @media (min-width: 768px) {
+        @media (min-width: 1024px) {
+            max-width: var(--max-width);
             flex-direction: row;
-        } */
+        }
 
         .hero-card {
             flex: 1;
@@ -131,7 +137,7 @@ body {
         /* Hero Video  */
         .hero-video {
             width: 100%;
-            max-width: 800px;
+            max-width: 600px;
             /* adjust to your layout */
             aspect-ratio: 16 / 9;
             /* standard video proportion */
@@ -142,6 +148,7 @@ body {
             /* content follows the rounded corners */
             background-color: var(--bg-soft);
             /* visible while there is no image */
+            flex: 1;
 
             .media-frame__content {
                 width: 100%;
@@ -158,8 +165,15 @@ body {
     .second-ctn {
         display: flex;
         flex-direction: column;
+        align-items: center;
         max-width: 900px;
         margin: 0 auto;
+        gap: var(--gap-columns);
+
+        @media (min-width: 1024px) {
+            max-width: var(--max-width);
+            flex-direction: row;
+        }
 
         .left-card {
             display: flex;
@@ -172,6 +186,13 @@ body {
             width: 100vw;
             margin-inline: calc(50% - 50vw);
 
+            @media (min-width: 768px) {
+                width: auto;
+                margin-inline: 0;
+                flex: 1;
+                border-radius: var(--radius-lg);
+            }
+
             h2 {
                 font-size: 2.2rem;
                 color: var(--color-cream);
@@ -180,6 +201,7 @@ body {
         }
 
         .right-card {
+            flex: 1;
             display: grid;
             grid-template-columns: auto 1fr;
             grid-template-rows: repeat(3, auto);
