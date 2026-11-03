@@ -126,7 +126,7 @@
     /* 48px → 96px */
     --section-padding-x: clamp(var(--space-sm), 0.59rem + 1.77vw, var(--space-lg));
     /* 16px → 32px */
-    --gap-columns: clamp(var(--space-lg), 1.59rem + 1.77vw, var(--space-xl));
+    --gap-columns: clamp(var(--space-xl), 1.59rem + 1.77vw, var(--space-2xl));
     /* 32px → 48px */
     --gap-stack: clamp(var(--space-sm), 0.79rem + 0.88vw, var(--space-md));
     /* 16px → 24px */

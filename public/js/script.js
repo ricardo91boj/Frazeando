@@ -17,3 +17,13 @@ menu.querySelectorAll(".navbar__link").forEach((link) => {
         toggle.setAttribute("aria-label", "Open menu");
     });
 });
+
+document.querySelectorAll(".program-card__toggle").forEach((toggle) => {
+    const more = document.getElementById(toggle.getAttribute("aria-controls"));
+
+    toggle.addEventListener("click", () => {
+        const isOpen = more.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", isOpen);
+        toggle.textContent = isOpen ? "Show less" : "Tell me more";
+    });
+});
